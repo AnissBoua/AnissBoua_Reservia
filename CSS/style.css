@@ -121,8 +121,8 @@ form{
 
 /*#endregion*/
 
-/*#region filtres*/
-.filtres, .filtres li, #info{
+/*#region filters*/
+.filters, .filters li, #info{
     display: flex;
     align-items: center;
 }
@@ -135,17 +135,17 @@ form{
     border-radius: 100%;
 }
 
-.filtres li{
+.filters li{
     border: 0.15em solid var(--grey);
     border-radius: 25px;
     margin: 0.5em;
 }
 
-.filtres b{
+.filters b{
     padding: 0em 0.7em;
 }
 
-.filtres li:hover{
+.filters li:hover{
     color: var(--icon_blue);
     transform: scale(1.03, 1.03);
 }
@@ -219,6 +219,9 @@ form{
 /*#endregion*/
 
 /*#region hebergement popular*/
+.fa-chart-line{
+    font-size: 20px;
+}
 #hebergement_popular{
     display: grid;
     grid-template-columns: 1fr;
@@ -362,7 +365,7 @@ footer ul{
         font-size: 14px;
     }
 
-    .filtres, .filtres ul{
+    .filters, .filters ul{
         flex-wrap: wrap;
     }
 
