@@ -19,6 +19,10 @@ h1, h2{
     font-size: 20px;
 }
 
+h2{
+    margin: 0.83em;
+}
+
 p, figure{
     margin: 0em;
 }
@@ -68,7 +72,7 @@ li{
 /*#region header*/
 header{
     display: grid;
-    grid-template-columns: 10fr 1fr 1fr 1fr;
+    grid-template-columns: 8fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
 }
@@ -95,7 +99,7 @@ form{
 }
 
 #place_icon{
-    padding: 0.6em;
+    padding: 0.9em;
     border-radius: 0.5em 0em 0em 0.5em;
     background-color: var(--grey);
 }
@@ -107,14 +111,14 @@ form{
 
 #search_text{
     border: 0.12em solid var(--grey);
-    padding: 0.6em;
+    padding: 0.9em;
 }
 
 #search_button{
     background-color: var(--icon_blue);
     color: white;
     font-family: 'Raleway', sans-serif;
-    padding: 0.7em;
+    padding: 1em;
     border: 0em;
     border-radius: 0em 0.7em 0.7em 0em;
 }
@@ -131,18 +135,19 @@ form{
     color: var(--icon_blue);
     background-color: var(--icon_lightblue);
     font-size: 14px;
-    padding: 0.8em;
+    padding: 0.9em;
     border-radius: 100%;
+    margin: -0.15em;
 }
 
 .filters li{
-    border: 0.15em solid var(--grey);
+    border: 0.1em solid var(--grey);
     border-radius: 25px;
     margin: 0.5em;
 }
 
 .filters b{
-    padding: 0em 0.7em;
+    padding: 0.6em 1.2em;
 }
 
 .filters li:hover{
@@ -153,9 +158,9 @@ form{
 /*#endregion*/
 
 #info_icon{
-    border: 0.15em solid var(--grey);
+    border: 0.1em solid var(--grey);
     border-radius: 50%;
-    padding: 0.2em;
+    padding: 0.3em;
     margin: 0em 0.3em;
 }
 
@@ -242,7 +247,7 @@ form{
     width: 95%;
     background-color: white;
     border-radius: 1.5em;
-    box-shadow: 0em 0em 0.5em silver;
+    box-shadow: 0em 0.3em 0.5em silver;
     padding: 0.3em;
     margin: auto;
 }
@@ -281,7 +286,7 @@ form{
 
 .activities_slot{
     border-radius: 1.5em;
-    box-shadow: 0em 0em 0.5em silver;
+    box-shadow: 0em 0.3em 0.5em silver;
     margin: 1em;
 }
 
@@ -293,7 +298,7 @@ form{
 }
 
 .activities_slot img{
-    height: calc(100% - 3.3em);
+    height: calc(100% - 2.8em);
     width: 100%;
     object-fit: cover;
     border-radius: 1.5em 1.5em 0em 0em;
@@ -373,7 +378,7 @@ footer ul{
     #center_page{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1.4fr 1fr;
+        grid-template-rows: 1fr 1.4fr;
     }
 
     #hebergement_ofplace{
@@ -383,6 +388,7 @@ footer ul{
     .hebergement_container{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto repeat(3, 1fr) auto;
+        grid-row: 2;
     }
 
     #showmore{
@@ -447,14 +453,32 @@ footer ul{
 }
 
 @media (max-width: 440px){
+    
+    main{
+        padding: 0em;
+    }
+    .search_filters_section, #activities{
+        padding: 0em 1em;
+    }
+
+    /*#region header*/     
     header{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
 
+    header a{
+        text-align: center;
+        padding: 1.5em 1em 1em 1em;
+    }
+
     #link_hebergement{
         border-top: 0em;
         border-bottom: 0.2em solid var(--icon_blue);
+    }
+
+    #link_activities{
+        border-bottom: 0.2em solid var(--grey);
     }
 
     #link_subscribe{
@@ -465,11 +489,13 @@ footer ul{
     span{
         display: none;
     }
+    /*#endregion*/
+    
     /*#region hebergement*/
     #center_page{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 2.5fr 1fr;
+        grid-template-rows: 1fr 2.5fr;
     }
 
     #hebergement_ofplace{
@@ -479,6 +505,7 @@ footer ul{
     .hebergement_container{
         grid-template-columns: 1fr;
         grid-template-rows: auto repeat(6, 1fr) auto;
+        background-color: white;
     }
 
     #showmore{
@@ -486,6 +513,9 @@ footer ul{
     }
     /*#endregion hebergement*/
 
+    #hebergement_popular{
+        border-radius: 0em;
+    }
     /*#region activities*/
     #activities{
         display: flex;
@@ -493,7 +523,7 @@ footer ul{
     }
 
     .activities_slot{
-        height: 15em;
+        height: 13em;
     }
     /*#endregion activities*/
 
