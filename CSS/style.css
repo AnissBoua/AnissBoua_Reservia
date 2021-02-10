@@ -12,7 +12,7 @@ body{
 }
 
 main, #logo{
-    padding: 0em 2em;
+    padding: 0em 1.5em;
 }
 
 h1, h2{
@@ -84,7 +84,7 @@ header{
 
 header a{
     text-align: center;
-    padding: 2em 1.5em;
+    padding: 1.5em 1em;
 }
 
 header b{
@@ -118,6 +118,7 @@ form{
     background-color: var(--icon_blue);
     color: white;
     font-family: 'Raleway', sans-serif;
+    cursor: pointer;
     padding: 1em;
     border: 0em;
     border-radius: 0em 0.7em 0.7em 0em;
@@ -129,6 +130,10 @@ form{
 .filters, .filters li, #info{
     display: flex;
     align-items: center;
+}
+
+.filters, .filters ul{
+    flex-wrap: wrap;
 }
 
 .fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog{
@@ -153,6 +158,7 @@ form{
 .filters li:hover{
     color: var(--icon_blue);
     transform: scale(1.03, 1.03);
+    transition: 0.15s;
 }
 
 /*#endregion*/
@@ -188,8 +194,6 @@ form{
 }
 
 .hebergement_section {
-    display: flex;
-    flex-direction: column;
     background-color: white;
     box-shadow: 0em 0.3em 0.5em silver;
     border-radius: 1.5em;
@@ -198,7 +202,6 @@ form{
 }
 
 .hebergement_section figure{
-    flex: auto;
     height: 80%;
     width: 100%;
 }
@@ -219,6 +222,7 @@ form{
     grid-row: 4;
     font-size: 16px;
     margin: 0em 1em;
+    cursor: pointer;
 }
 
 /*#endregion*/
@@ -298,15 +302,15 @@ form{
 }
 
 .activities_slot img{
-    height: calc(100% - 2.8em);
+    height: calc(100% - 3em);
     width: 100%;
     object-fit: cover;
     border-radius: 1.5em 1.5em 0em 0em;
 }
 
 .activities_slot figcaption{
-    height: 1em;
-    padding: 1em;
+    height: 1.5em;
+    margin: 1em;
 }
 
 #activities_slot_01{
@@ -361,6 +365,29 @@ footer ul{
 
 /*#endregion*/
 
+@media (max-width: 1050px){
+    #center_page{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2.5fr;
+    }
+
+    .hebergement_container{
+        grid-row: 2;
+    }
+
+    #hebpop_title{
+        grid-column: 1/4;
+    }
+
+    #hebergement_popular{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 3.5em 1fr;
+        margin: 1em 0em;
+        padding: 1em;
+    }
+}
+
 @media (max-width: 770px){
     h1, h2, h3{
         font-size: 16px;
@@ -388,7 +415,6 @@ footer ul{
     .hebergement_container{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto repeat(3, 1fr) auto;
-        grid-row: 2;
     }
 
     #showmore{
@@ -398,9 +424,14 @@ footer ul{
 
     /*#region populaire*/
     #hebergement_popular{
+        grid-template-columns: 1fr;
         grid-template-rows: 3.5em repeat(3, 10em);
         margin: 1em 0em;
         padding: 1em;
+    }
+
+    #hebpop_title{
+        grid-column: 1;
     }
 
     .hebpop_img {
@@ -444,6 +475,11 @@ footer ul{
         grid-row: 5;
     }
     /*#endregion*/
+
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 @media (min-width: 441px){
