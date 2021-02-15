@@ -55,6 +55,7 @@ a:visited{
 
 a:hover{
     color: #0065FC;
+    transition: 0.2s;
 }
 
 ul{
