@@ -295,8 +295,6 @@ form{
 }
 
 .activities_slot figure{
-    display: flex;
-    flex-direction: column;
     width: 100%;
     height: 100%;
 }
@@ -310,7 +308,7 @@ form{
 
 .activities_slot figcaption{
     height: 1.5em;
-    margin: 1em;
+    margin: 0.8em;
 }
 
 #activities_slot_01{
