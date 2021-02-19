@@ -2,33 +2,36 @@
     --icon_blue: #0065FC;
     --icon_lightblue:  #DEEBFF;
     --grey:  #F2F2F2;
+    --darkgrey: #d9d9d9;
 }
 
 /*#region general*/
 body{
     font-family: 'Raleway', sans-serif;
     margin: auto;
-    max-width: 1800px;
+    max-width: 1600px;
 }
 
-main, #logo{
-    padding: 0em 1.5em;
+main, header{
+    padding: 0em 3em;
 }
 
-h1, h2{
+h1, .fa-chart-line{
     font-size: 20px;
+    margin: 0.5em 0em;
 }
 
 h2{
+    font-size: 18px;
     margin: 0.83em;
 }
 
-p, figure{
-    margin: 0em;
+p{
+    margin: 0.5em 0em;
 }
 
-h1{
-    margin: 1em 0em 0em 0em;
+figure{
+    margin: 0em;
 }
 
 figcaption{
@@ -41,8 +44,7 @@ figcaption{
 }
 
 .grey-star{
-    color: #d9d9d9;
-    font-size: 14px;
+    color: var(--darkgrey);
 }
 
 a{
@@ -54,14 +56,14 @@ a:visited{
 }
 
 a:hover{
-    color: #0065FC;
-    transition: 0.2s;
+    color: var(--icon_blue);
+    transition: 0.15s;
 }
 
 ul{
     display: flex;
     padding: 0em;
-    margin: 0.5em 0em;
+    margin: 0em;
 }
 
 li{
@@ -74,13 +76,12 @@ li{
 header{
     display: grid;
     grid-template-columns: 8fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
     align-items: center;
 }
 
 #link_hebergement{
     color: var(--icon_blue);
-    border-top: 0.2em solid var(--icon_blue);
+    border-top: 0.15em solid var(--icon_blue);
 }
 
 header a{
@@ -100,7 +101,7 @@ form{
 }
 
 #place_icon{
-    padding: 0.9em;
+    padding: 1em;
     border-radius: 0.5em 0em 0em 0.5em;
     background-color: var(--grey);
 }
@@ -111,8 +112,8 @@ form{
 }
 
 #search_text{
-    border: 0.12em solid var(--grey);
-    padding: 0.9em;
+    border: 0.15em solid var(--grey);
+    padding: 1em;
 }
 
 #search_button{
@@ -137,12 +138,12 @@ form{
     flex-wrap: wrap;
 }
 
-.fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog{
+.fa-fw{
     color: var(--icon_blue);
     background-color: var(--icon_lightblue);
     font-size: 14px;
-    padding: 0.9em;
-    border-radius: 100%;
+    padding: 1em;
+    border-radius: 50%;
     margin: -0.15em;
 }
 
@@ -162,14 +163,15 @@ form{
     transition: 0.15s;
 }
 
-/*#endregion*/
-
 #info_icon{
+    color: var(--icon_blue);
     border: 0.1em solid var(--grey);
+    font-size: 12px;
     border-radius: 50%;
-    padding: 0.3em;
+    padding: 0.4em 0.7em;
     margin: 0em 0.3em;
 }
+/*#endregion*/
 
 #center_page{
     display: grid;
@@ -181,8 +183,8 @@ form{
 .hebergement_container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto repeat(2, 15em) auto;
-    background-color: #F2F2F2;
+    grid-template-rows: auto repeat(2, 1fr) auto;
+    background-color: var(--grey);
     border-radius: 1.5em;
     margin: 1em 0em;
     padding: 1em;
@@ -190,13 +192,11 @@ form{
 
 #hebergement_ofplace{
     grid-column: 1/4;
-    grid-row: 1;
-    margin-left: 1em;
 }
 
 .hebergement_section {
     background-color: white;
-    box-shadow: 0em 0.3em 0.5em silver;
+    box-shadow: 0em 0.4em 0.4em var(--darkgrey);
     border-radius: 1.5em;
     padding: 0.3em;
     margin: 1em;
@@ -219,8 +219,6 @@ form{
 }
 
 #showmore{
-    grid-column: 1/3;
-    grid-row: 4;
     font-size: 16px;
     margin: 0em 1em;
     cursor: pointer;
@@ -229,17 +227,14 @@ form{
 /*#endregion*/
 
 /*#region hebergement popular*/
-.fa-chart-line{
-    font-size: 20px;
-}
 #hebergement_popular{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 3.5em repeat(3, 10em);
-    background-color: #F2F2F2;
+    background-color: var(--grey);
     border-radius: 1.5em;
     margin: 1em 2em;
-    padding: 1em 1em;
+    padding: 1em;
 }
 
 #hebpop_title{
@@ -252,7 +247,7 @@ form{
     width: 95%;
     background-color: white;
     border-radius: 1.5em;
-    box-shadow: 0em 0.3em 0.5em silver;
+    box-shadow: 0em 0.4em 0.4em var(--darkgrey);
     padding: 0.3em;
     margin: auto;
 }
@@ -276,10 +271,6 @@ form{
     padding: 0.2em 1em;
 }
 
-.hebpop_info ul{
-    margin: 0em;
-}
-
 /*#endregion*/
 
 /*#region activities*/
@@ -291,19 +282,17 @@ form{
 
 .activities_slot{
     border-radius: 1.5em;
-    box-shadow: 0em 0.3em 0.5em silver;
+    box-shadow: 0em 0.3em 0.5em var(--darkgrey);
     margin: 1em;
 }
 
 .activities_slot figure{
-    display: flex;
-    flex-direction: column;
     width: 100%;
     height: 100%;
 }
 
 .activities_slot img{
-    height: calc(100% - 3em);
+    height: calc(100% - 3.5em);
     width: 100%;
     object-fit: cover;
     border-radius: 1.5em 1.5em 0em 0em;
@@ -355,20 +344,18 @@ footer{
     width: 100%;
 }
 
-footer div {
+.footer_div{
     padding: 1em 4em;
 }
 
-footer ul{
-    display: flex;
+.footer_div ul{
     flex-direction: column;
 }
 
 /*#endregion*/
 
-@media (max-width: 1050px){
+@media (max-width: 1060px){
     #center_page{
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2.5fr;
     }
@@ -383,29 +370,32 @@ footer ul{
 
     #hebergement_popular{
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 3.5em 1fr;
+        grid-template-rows: auto 1fr;
         margin: 1em 0em;
-        padding: 1em;
     }
 }
 
 @media (max-width: 770px){
-    h1, h2, h3{
+    /*#region general*/
+    main, header{
+        padding: 0em 1.5em;
+    }
+
+    h1, h2{
         font-size: 16px;
     }
 
-    p, b, a{ 
+    p, b, a, h3{ 
         font-size: 14px;
     }
 
     .filters, .filters ul{
         flex-wrap: wrap;
     }
+    /*#endregion general*/
 
     /*#region hebergement*/ 
     #center_page{
-        display: grid;
-        grid-template-columns: 1fr;
         grid-template-rows: 1fr 1.4fr;
     }
 
@@ -417,18 +407,12 @@ footer ul{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto repeat(3, 1fr) auto;
     }
-
-    #showmore{
-        grid-column: 1;
-        grid-row: 5;
-    } /*#endregion*/
+    /*#endregion*/
 
     /*#region populaire*/
     #hebergement_popular{
         grid-template-columns: 1fr;
-        grid-template-rows: 3.5em repeat(3, 10em);
-        margin: 1em 0em;
-        padding: 1em;
+        grid-template-rows: auto repeat(3, 10em);
     }
 
     #hebpop_title{
@@ -443,7 +427,7 @@ footer ul{
     /*#region activities*/
     #activities{
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto repeat(3, 15em);
+        grid-template-rows: auto repeat(4, 15em);
     }
 
     #activities_slot_01{
@@ -491,10 +475,11 @@ footer ul{
 
 @media (max-width: 440px){
     
-    main{
+    main, header{
         padding: 0em;
     }
-    .search_filters_section, #activities{
+    
+    .search_filters_section, #activities, #logo{
         padding: 0em 1em;
     }
 
@@ -522,16 +507,14 @@ footer ul{
         grid-column: 2;
         grid-row: 1;
     }
-
+    /*#endregion*/
+    
     span{
         display: none;
     }
-    /*#endregion*/
-    
+
     /*#region hebergement*/
     #center_page{
-        display: grid;
-        grid-template-columns: 1fr;
         grid-template-rows: 1fr 2.5fr;
     }
 
@@ -543,10 +526,6 @@ footer ul{
         grid-template-columns: 1fr;
         grid-template-rows: auto repeat(6, 1fr) auto;
         background-color: white;
-    }
-
-    #showmore{
-        grid-row: 8;
     }
     /*#endregion hebergement*/
 
@@ -560,12 +539,8 @@ footer ul{
     }
 
     .activities_slot{
-        height: 13em;
+        height: 15em;
     }
     /*#endregion activities*/
-
-    footer{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 0.7fr 0.7fr;
-    }
+    
 }
