@@ -48,6 +48,7 @@ figcaption{
 }
 
 a{
+    color: black;
     text-decoration: none;
 }
 
@@ -89,13 +90,13 @@ header a{
     padding: 1.5em 1em;
 }
 
-header b{
+#link_subscribe{
     color: var(--icon_blue);
 }
 /*#endregion header*/
 
 /*#region search zone*/
-form{
+.search_form{
     display: flex;
     margin: 1em 0em;
 }
@@ -257,6 +258,7 @@ form{
 }
 
 .hebpop_img {
+    min-width: 40%;
     width: 40%;
     height: 8em;
     object-fit: cover;
@@ -277,7 +279,7 @@ form{
 #activities{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 20em 20em;
+    grid-template-rows: auto 16em 3em 13em;
 }
 
 .activities_slot{
@@ -305,22 +307,22 @@ form{
 
 #activities_slot_01{
     grid-column: 1;
-    grid-row: 2/4;
+    grid-row: 2/5;
 }
 
 #activities_slot_02{
     grid-column: 2;
-    grid-row: 2/3;
+    grid-row: 2/4;
 }
 
 #activities_slot_03{
     grid-column: 2;
-    grid-row: 3/4;
+    grid-row: 4/5;
 }
 
 #activities_slot_04{
     grid-column: 3;
-    grid-row: 2/4;
+    grid-row: 2/5;
 }
 
 #activities_slot_05{
@@ -330,7 +332,7 @@ form{
 
 #activities_slot_06{
     grid-column: 4;
-    grid-row: 3/4;
+    grid-row: 3/5;
 }
 
 /*#endregion*/
@@ -481,6 +483,10 @@ footer{
     
     .search_filters_section, #activities, #logo{
         padding: 0em 1em;
+    }
+
+    .search_form{
+        justify-content: center;
     }
 
     /*#region header*/     
